@@ -1,0 +1,30 @@
+Source: gnome-icon-theme
+Section: gnome
+Priority: optional
+Maintainer: Leonardo Rodrigues Pereira <leontecnicalonline@gmail.com>
+Uploaders: @GNOME_TEAM@
+Build-Depends: debhelper-compat (= 13),
+               gnome-pkg-tools (>= 0.10)
+Build-Depends-Indep: gettext,
+                     gtk-update-icon-cache,
+                     icon-naming-utils (>= 0.8.7),
+                     intltool (>= 0.40.0),
+                     librsvg2-bin,
+                     pkg-config
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: https://download.gnome.org/sources/gnome-icon-theme
+Vcs-Browser: https://salsa.debian.org/gnome-team/gnome-icon-theme
+Vcs-Git: https://salsa.debian.org/gnome-team/gnome-icon-theme.git
+
+Package: gnome-icon-theme
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         gtk-update-icon-cache,
+         hicolor-icon-theme,
+         librsvg2-common
+Enhances: nautilus (>= 2.2)
+Description: This package contains the default icon theme used by the GNOME
+ The icons are used in the panel menu, and in nautilus and other applications
+ to represent the different applications, files, directories, and devices.
